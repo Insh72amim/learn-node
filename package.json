@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Insh72amim/learn-node/issues"
   },
-  "homepage": "https://github.com/Insh72amim/learn-node#readme"
+  "homepage": "https://github.com/Insh72amim/learn-node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
