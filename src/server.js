@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const http = require("http");
 
 const config = require('./config');
-//const logger = require("../src/lib/logger");
+const logger = require("../src/lib/logger");
 
 mongoose.Promise = global.Promise;
 
@@ -16,7 +16,7 @@ const mongooseOptions = {
 mongoose.connect(config.db, mongooseOptions);
 const db = mongoose.connection;
 
-//db.on("error", (err) => logger.error("Mongoose error", err));
+db.on("error", (err) => logger.error("Mongoose error", err));
 
 db.once("open", async () => {
     mongoose.db = mongoose.createConnection(config.db, mongooseOptions);
